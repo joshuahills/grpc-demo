@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  grpcserver:
+    image: ${DOCKER_REGISTRY-}grpcserver
+    build:
+      context: .
+      dockerfile: GrpcServer/Dockerfile

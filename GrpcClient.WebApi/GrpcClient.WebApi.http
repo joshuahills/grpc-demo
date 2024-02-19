@@ -1,0 +1,6 @@
+@GrpcClient.WebApi_HostAddress = http://localhost:5274
+
+GET {{GrpcClient.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

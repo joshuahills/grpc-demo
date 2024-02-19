@@ -3,7 +3,7 @@
 using Grpc.Net.Client;
 using Grpc.Net.Client.Balancer;
 using Grpc.Net.Client.Configuration;
-using GrpcEmailerClient;
+using GrpcEmailer;
 using Microsoft.Extensions.DependencyInjection;
 
 internal class Program

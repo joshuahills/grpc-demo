@@ -1,7 +1,8 @@
 namespace GrpcServer.Services;
 
 using Grpc.Core;
-using GrpcServer;
+using GrpcEmailer;
+using System.Threading.Tasks;
 
 public class EmailService(ILogger<EmailService> logger) : Email.EmailBase
 {

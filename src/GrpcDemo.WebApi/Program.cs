@@ -1,11 +1,9 @@
-
 namespace GrpcDemo.WebApi;
 
 using Grpc.Core;
 using Grpc.Net.Client.Balancer;
 using Grpc.Net.Client.Configuration;
 using GrpcEmailer;
-using System.Net;
 
 public class Program
 {
@@ -14,6 +12,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services
+            .AddLogging(o => o.AddConsole())
             .AddGrpcClient<Email.EmailClient>(o =>
             {
                 o.Address = new Uri("static://localhost");
@@ -48,7 +47,9 @@ public class Program
 
         app.MapPost("/email", async (Email.EmailClient emailClient, EmailRequest request) =>
         {
+            app.Logger.LogInformation("Sending email: {@emailReq}", request);
             var response = await emailClient.SendEmailAsync(request);
+            app.Logger.LogInformation("Received success: {success}", response.Success);
 
             return TypedResults.Created();
         });

@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "..\Contracts\Contracts.csproj", "{2E510342-8AFB-49A0-B489-A6C48949B698}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{2E510342-8AFB-49A0-B489-A6C48949B698}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcDemo.WebApi", "..\GrpcDemo.WebApi\GrpcDemo.WebApi.csproj", "{DC8BA621-0A0E-4EFA-AB66-892976B25A39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcDemo.WebApi", "GrpcDemo.WebApi\GrpcDemo.WebApi.csproj", "{DC8BA621-0A0E-4EFA-AB66-892976B25A39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
